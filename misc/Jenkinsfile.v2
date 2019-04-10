@@ -24,7 +24,7 @@ node {
      mysql.stop()
    }                                     
    stage('docker build/push') {            
-     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+     docker.withRegistry('https://index.docker.io/v1/', 'ko3yn') {
        def app = docker.build("ko3yn/docker-jenkins_test:${commit_id}", '.').push()
      }                                     
    }                                       
